@@ -1,0 +1,1 @@
+// Used to gather images from https://dog.ceo/dog-api
