@@ -14,10 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
      <title>Adopt, Don't Shop!</title>
 </head>
 
-<body class="flex-column justify-space-around">
+<body class="flex-column justify-space-around top-image">
+    <span class="top-image" role="img" aria-label="Paws and bones"></span>
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg mx-auto" id="nav">
         <div class="container-fluid">            
@@ -27,13 +31,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item me-auto ">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <li class="nav-item" id="home">
+                        <a class="nav-link active" aria-current="page" href="/landing">Home</a>
                     </li>
-                     <span class="navbar-text mx-auto">
-      Adopt, Don't Shop!
-    </span>
-                    {{#if loggedIn}}
+                     <span class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;Adopt, Don't Shop!&nbsp;&nbsp;&nbsp; </span>
+                     {{#if loggedIn}}
                     <li class="nav-item">
                         <a class="nav-link" href="/search">Search</a>
                     </li>
