@@ -1,22 +1,31 @@
 body {
-    font-family: 'Manrope', bold, sans-serif;
+    font-family: 'Manrope', sans-serif;
     color: black;
 }
 
-
-
-
-.navbar {
-    background-color: rgb(100,195,43);
+.top-image{
+    background-image: linear-gradient(#dadbdd, rgb(100,195,43)), url(../images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    max-width: 2040px;
+    display: flex;
 }
+
+
 
 .navbar-text{
+    font-family: 'Rubik Moonrocks', cursive;
     color: black;
-    font-size: 100px;
+    font-size: 75px;
 }
 
 .nav-link {
     color: black;
-    font-size: x-large;
+    font-size: xx-large;
+}
+
+#home{
+   vertical-align: middle; 
 }
 
