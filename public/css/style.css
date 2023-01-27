@@ -1,0 +1,22 @@
+body {
+    font-family: 'Manrope', bold, sans-serif;
+    color: black;
+}
+
+
+
+
+.navbar {
+    background-color: rgb(100,195,43);
+}
+
+.navbar-text{
+    color: black;
+    font-size: 100px;
+}
+
+.nav-link {
+    color: black;
+    font-size: x-large;
+}
+
