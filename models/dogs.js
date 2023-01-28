@@ -28,3 +28,5 @@ Dogs.init(
         modelName: 'dog',
     }
 )
+
+module.exports = Dogs;
