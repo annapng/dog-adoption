@@ -1,31 +1,56 @@
 body {
     font-family: 'Manrope', sans-serif;
     color: black;
+    /*linear-gradient(#dadbdd, rgb(100,195,43))*/
 }
 
 .top-image{
-    background-image: linear-gradient(#dadbdd, rgb(100,195,43)), url(../images/Background.jpg);
+    background-attachment: scroll;
+    background-image: url(../images/Background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     justify-content: center;
     max-width: 2040px;
     display: flex;
 }
 
+.navbar {
+ background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
+ background-color: transparent;
+ /*margin: 0px;*/
+}
 
 
-.navbar-text{
+#navTitle{
     font-family: 'Rubik Moonrocks', cursive;
     color: black;
     font-size: 75px;
 }
 
-.nav-link {
+#navLink {
     color: black;
     font-size: xx-large;
 }
 
-#home{
-   vertical-align: middle; 
+.mission{
+    background-color: rgb(200, 222, 186); 
 }
+#missionH {
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 50px;
+    text-indent: 150px;
+}
+
+#missionP {
+    text-indent: 30px;
+    font-size: 30px;
+}
+ #linkRescue {
+    color: black;
+    font-size: 30px;
+ }
+
+
+
+
 
