@@ -1,4 +1,4 @@
-INSERT INTO dogs (id, name, age, gender, breed, size)
+INSERT INTO dogs (id, commonName, APIname, age, gender, breed, size)
 VALUES
     (1, "Lola", 3, "female", "Akita", "large"),
     (2, "Hades", 3, "male", "Akita", "large"),
