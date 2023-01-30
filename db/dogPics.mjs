@@ -1,10 +1,6 @@
-// const fs = require("fs");
 import fetch from 'node-fetch';
-import fs from 'fs';
 
 const breedArray = ["akita", "appenzeller", "australian/shepherd", "basenji", "beagle", "coonhound", "boxer", "bulldog/english", "bulldog/french", "cattledog/australian", "chihuahua", "chow", "collie/border", "corgi/cardigan", "dachshund", "dalmatian", "dane/great", "doberman", "germanshepherd", "greyhound/italian", "hound/afghan", "hound/blood", "husky", "kelpie", "labradoodle", "labrador", "maltese", "mastiff/english", "mix", "mountain/bernese", "newfoundland", "pinscher/miniature", "pitbull", "pointer/german", "pomeranian", "poodle/toy", "poodle/standard", "pug", "retriever/golden", "rottweiler", "samoyed", "setter/english", "setter/irish", "sheepdog/english", "shiba", "spaniel/cocker", "springer/english", "terrier/american", "terrier/scottish", "terrier/yorkshire", "weimaraner", "whippet", "wolfhound/irish"];
-
-let dataArray = [];
 
 breedArray.forEach(element => {
 
@@ -12,33 +8,17 @@ breedArray.forEach(element => {
         .then((response) => response.json())
         .then((data) => {
 
-          const object = {
-          breed: element,
-          firstLink: data.message[0],
-          secondLink: data.message[1] };
-          
+        let breed = JSON.stringify(element);
+        //console.log(breed);
+        let dogURL1 = JSON.stringify(data.message[0]);
+        let dogURL2 = JSON.stringify(data.message[1]);
 
-           //console.log(object);
+          let dog1 = `(${breed}, ${dogURL1}), `;
+          let dog2 = `(${breed}, ${dogURL2}), `;
 
-          dataArray.push(object);
-
-          /*
-          dataArray.push(element);
-          dataArray.push(data.message);
-          console.log(dataArray); */
-  
-/*let array = [];
-array.push(element);
-console.log(array);*/
+          console.log(dog1);
+          console.log(dog2);
 
 });
   
-});  
-
-console.log(dataArray);
-
-let sqlData;
-
-
-
-fs.writeFileSync("dogPics.sql", sqlData);
+}); 

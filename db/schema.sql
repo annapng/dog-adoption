@@ -11,7 +11,8 @@ USE dog_db;
 
 CREATE TABLE dogs (    
     id INT NOT NULL,
-    name VARCHAR(30) NOT NULL,
+    commonName VARCHAR(30) NOT NULL,
+    APIname VARCHAR(30) NOT NULL,
     age INT NOT NULL,
     gender VARCHAR(6) NOT NULL,
     breed VARCHAR(30) NOT NULL,
@@ -28,7 +29,8 @@ CREATE TABLE goodWith (
 );
 
 
-CREATE TABLE dog_pictures (
-    id INT NOT NULL,
-    link INT NOT NULL,
+CREATE TABLE dogPics (
+    APIname VARCHAR(30) NOT NULL,
+    commonName VARCHAR(30) NOT NULL,
+    dogPic VARCHAR(100) NOT NULL
 );
