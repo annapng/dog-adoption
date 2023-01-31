@@ -20,7 +20,6 @@ body {
  /*margin: 0px;*/
 }
 
-
 #navTitle{
     font-family: 'Rubik Moonrocks', cursive;
     color: black;
@@ -48,6 +47,15 @@ body {
  #linkRescue {
     color: black;
     font-size: 30px;
+ }
+
+ .signup {
+    background-color: rgb(200, 222, 186); 
+ }
+
+ .loginLink {
+    color: black;
+    font-size: large;
  }
 
 

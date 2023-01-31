@@ -11,4 +11,13 @@ router.use('/api', apiRoutes);
     //res.render('landing');
 //})
 
+// Added to format sign up handlebar testing
+router.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
 module.exports = router;
