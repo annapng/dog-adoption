@@ -20,7 +20,7 @@
 <body class="flex-column justify-space-around top-image">
     <span class="top-image" role="img" aria-label="Paws and bones"></span>
     <!-- Nav Bar -->
-<nav class="navbar navbar-dark navbar-expand-xl">
+<nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid">
           <a class="navbar-brand" id="navTitle">Adopt, Don't Shop!</a>
           <button
@@ -28,14 +28,14 @@
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarList"
-            aria-controls="navbarList"
-            aria-expanded="true"
+            aria-controls="navbarsupportedContent"
+            aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
         <div class="collapse navbar-collapse" id="navbarList">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav me-auto mb-2 mb-l">
                 <li class="nav-item">
                     <a class="nav-link active" id="navLink" aria-current="page" href="/landing">Home</a>
                 </li>
@@ -67,8 +67,7 @@
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
