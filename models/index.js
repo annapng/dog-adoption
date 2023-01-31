@@ -9,13 +9,14 @@ Dogs.belongsTo(User, {
 User.hasMany(Dogs, {
     foreignKey: 'dogs_id'
 });
-
+/*
 Restriction.belongsToMany(User, {
-
+    as: 'restriction_user',
+    foreignKey: 'restriction_id'
 });
-
+*/
 module.exports = {
     User, 
     Dogs, 
-    Restriction
+    //Restriction
 }; 
