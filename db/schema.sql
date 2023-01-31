@@ -34,3 +34,12 @@ CREATE TABLE dogPics (
     commonName VARCHAR(30) NOT NULL,
     dogPic VARCHAR(100) NOT NULL
 );
+
+
+SELECT commonName
+FROM dogPics 
+INNER JOIN dogs ON join_condition;
+
+SELECT commonName
+FROM dogPics
+INNER JOIN goodWith ON join_condition;
