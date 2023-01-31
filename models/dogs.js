@@ -16,7 +16,23 @@ Dogs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        bread: {
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        gender: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        commonName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        size: {
             type: DataTypes.STRING,
             allowNull: false,
         }

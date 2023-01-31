@@ -1,11 +1,12 @@
+/*
 const { Model, DataTypes } = require('sequelize');
 const { Restriction } = require('.');
 
 const sequelize = require('../config/connection');
 
-class Restrictions extends Model {}
+class Restriction extends Model {}
 
-Restrictions.init(
+Restriction.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -22,4 +23,5 @@ Restrictions.init(
     }
 )
 
-module.exports = Restrictions; 
+module.exports = Restriction;
+*/
