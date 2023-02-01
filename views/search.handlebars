@@ -1,15 +1,20 @@
 <div>
   <h1 class="signup">Find Your Best Friend!</h2>
 
-  <form action="db/dogs.sql" method="post" class="form signup-form">
-    <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Gender</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Male</a></li>
-    <li><a class="dropdown-item" href="#">Female</a></li>
-  </ul>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-</div>
+  <form action="/submit-form" method="post" class="form signup-form">
+    <h4>Gender</h4>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="gender" value="female">
+  <label>
+    Female
+  </label>
+  <input class="form-check-input" type="checkbox" name="gender" value="male">
+  <label>
+    Male
+  </label>
+    </div>
+
+    <h5>Breed</h5>
     <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Breed</button>
   <ul class="dropdown-menu">
@@ -69,7 +74,27 @@
     </ul>
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
 </div> 
-   <div class="input-group mb-3">
+
+    <h3>Size</h3>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="size" value="small">
+  <label>
+   Small
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="size" value="medium" >
+  <label>
+    Medium
+  </label>
+</div>
+   <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="size" value="large" >
+  <label>
+    Large
+  </label>
+</div> 
+   {{!-- <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Size</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Small</a></li>
@@ -77,9 +102,29 @@
     <li><a class="dropdown-item" href="#">Large</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div> --}}
+    <h1>Age</h1>
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="age" value="1">
+  <label>
+   1
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="age" value="2" >
+  <label>
+    2
+  </label>
+</div>
+   <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="age" value="3" >
+  <label>
+    3
+  </label>
 </div>
 
-    <div class="input-group mb-3">
+
+    {{!-- <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Age</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">1-2 Years</a></li>
@@ -87,22 +132,67 @@
     <li><a class="dropdown-item" href="#">9-15 Years</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div> --}}
+    <h1>Good With Other Dogs</h1>
+     <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="otherDogs" value="yes">
+  <label>
+   Yes
+  </label>
 </div>
- <div class="input-group mb-3">
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="otherDogs" value="no" >
+  <label>
+    No
+  </label>
+</div>
+
+ {{!-- <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Good With Kids</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Yes</a></li>
     <li><a class="dropdown-item" href="#">No</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div> --}}
+
+     <h2>Good With Cats</h2>
+     <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="cats" value="yes">
+  <label>
+   Yes
+  </label>
 </div>
-    <div class="input-group mb-3">
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="cats" value="no" >
+  <label>
+    No
+  </label>
+</div>
+
+
+     <h2>Good With Kids</h2>
+     <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="kids" value="yes">
+  <label>
+   Yes
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="kids" value="no" >
+  <label>
+    No
+  </label>
+</div>
+
+    {{!-- <div class="input-group mb-3">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Good With Cats</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Yes</a></li>
     <li><a class="dropdown-item" href="#">No</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
-</div>
+</div> --}}
+    <button type="submit" value="submit">Submit</button>
   </form>
 </div>
