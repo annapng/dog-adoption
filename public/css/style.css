@@ -1,7 +1,7 @@
 body {
     font-family: 'Manrope', sans-serif;
     color: black;
-    width: fit-content;
+    /*width: fit-content;
     /*linear-gradient(#dadbdd, rgb(100,195,43))*/
 }
 
@@ -11,15 +11,14 @@ body {
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;
-    max-width: 2040px;
     display: flex;
 }
 
 .navbar {
  background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
  background-color: transparent;
- width: fit-content;
- /*margin: 0px;*/
+ width: 100%;
+ margin: 0px;
 }
 
 #navTitle{
@@ -31,6 +30,11 @@ body {
 #navLink {
     color: black;
     font-size: xx-large;
+}
+
+#logout {
+    color: black;
+    font-size: large;
 }
 
 .mission{
@@ -61,5 +65,14 @@ body {
     font-size: large;
  }
 
+ @media screen and (max-width: 720px) {
+    #navTitle {
+      font-size: 50px;
+    }
+  }
 
-
+  @media screen and (max-width: 500px) {
+    body {
+        width: 500px;
+    }
+  }

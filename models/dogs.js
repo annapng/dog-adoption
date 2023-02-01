@@ -26,6 +26,7 @@ Dogs.init(
         },
         commonName: {
             type: DataTypes.STRING,
+            foreignKey: true,
             allowNull: false,
         },
         breed: {
@@ -33,6 +34,14 @@ Dogs.init(
             allowNull: false,
         },
         size: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        goodWith: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        likesToPlay: {
             type: DataTypes.STRING,
             allowNull: false,
         }
