@@ -33,6 +33,11 @@ body {
     font-size: xx-large;
 }
 
+#logout {
+    color: black;
+    font-size: large;
+}
+
 .mission{
     background-color: rgb(200, 222, 186); 
 }
