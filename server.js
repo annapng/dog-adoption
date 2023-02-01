@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const mysql = require('mysql2');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -10,6 +11,18 @@ const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+
+const db = mysql.createConnection(
+  {
+    host: 'localhost',
+    user: 'root',
+    password: '', // your own password
+    database: 'dog_db'
+  },
+  console.log(`Connected to dog_db!`)
+);
+
 
 const sess = {
   secret: 'Super secret secret',
@@ -21,7 +34,7 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize,
   }),
-};
+}; // cookies and/or doggy biscuits :)
 
 app.use(session(sess));
 
