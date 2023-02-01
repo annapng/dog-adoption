@@ -36,7 +36,17 @@ Dogs.init(
         size: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        goodWith: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        likesToPlay: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
+
+
     },
     {
         sequelize,
