@@ -20,15 +20,17 @@ DogPics.init(
         },
         dogs_id: {
             type: DataTypes.INTEGER,
+            allowNull: true,
             references: {
                 model: 'dogs',
                 key: 'id'
-            }, }
+            },
+        }
     },
     {
         sequelize,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: 'dogPics',
     }
 )
