@@ -26,6 +26,7 @@ Dogs.init(
         },
         commonName: {
             type: DataTypes.STRING,
+            foreignKey: true,
             allowNull: false,
         },
         breed: {
