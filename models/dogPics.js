@@ -18,12 +18,12 @@ DogPics.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        id: {
+        dogs_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true, 
-        }
+            references: {
+                model: 'dogs',
+                key: 'id'
+            }, }
     },
     {
         sequelize,

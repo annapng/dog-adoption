@@ -11,7 +11,6 @@ body {
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;
-    width: fit-content;
     display: flex;
 }
 
@@ -66,4 +65,15 @@ body {
     font-size: large;
  }
 
+ @media screen and (max-width: 720px) {
+    #navTitle {
+      font-size: 50px;
+    }
+  }
 
+  @media screen and (max-width: 500px) {
+    body {
+        width: 500px;
+    }
+
+  }
