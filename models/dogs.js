@@ -26,8 +26,10 @@ Dogs.init(
         },
         commonName: {
             type: DataTypes.STRING,
-            foreignKey: true,
-            allowNull: false,
+            references: {
+                model: 'goodWith',
+                key: 'commonName'
+            },
         },
         breed: {
             type: DataTypes.STRING,
@@ -37,20 +39,16 @@ Dogs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        goodWith: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         likesToPlay: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }
     },
     {
         sequelize,
         freezeTableName: true,
-        underscored: true,
-        modelName: 'dog',
+        underscored: false,
+        modelName: 'dogs',
     }
 )
 

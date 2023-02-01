@@ -8,21 +8,9 @@ const mysql = require('mysql2');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
-require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    user: 'root',
-    password: process.env.DB_PASSWORD,
-    database: 'dog_db'
-  },
-  console.log(`Connected to dog_db!`)
-);
 
 
 const sess = {
