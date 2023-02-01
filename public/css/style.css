@@ -18,8 +18,8 @@ body {
 .navbar {
  background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
  background-color: transparent;
- /*width: fit-content;
- /*margin: 0px;*/
+ width: fit-content;
+ margin: 0px;
 }
 
 #navTitle{

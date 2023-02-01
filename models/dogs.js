@@ -35,7 +35,14 @@ Dogs.init(
         size: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        dogs_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            },
+        }, 
     },
     {
         sequelize,
