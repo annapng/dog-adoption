@@ -1,7 +1,7 @@
 body {
     font-family: 'Manrope', sans-serif;
     color: black;
-    width: fit-content;
+    /*width: fit-content;
     /*linear-gradient(#dadbdd, rgb(100,195,43))*/
 }
 
@@ -11,14 +11,14 @@ body {
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;
-    max-width: 2040px;
+    width: fit-content;
     display: flex;
 }
 
 .navbar {
  background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
  background-color: transparent;
- width: fit-content;
+ /*width: fit-content;
  /*margin: 0px;*/
 }
 
