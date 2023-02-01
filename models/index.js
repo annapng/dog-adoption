@@ -2,7 +2,7 @@ const User = require('./User');
 const Dogs = require('./dogs');
 const DogPics = require('./dogPics');
 const goodWith = require('./goodWith');
-const Restriction = require('./restrictions');
+//const Restriction = require('./restrictions');
 
 Dogs.belongsTo(User, {
     foreignKey: 'dogs_id'
@@ -27,6 +27,8 @@ Restriction.belongsToMany(User, {
 */
 module.exports = {
     User, 
-    Dogs, 
+    Dogs,
+    DogPics,
+    goodWith,
     //Restriction
 }; 
