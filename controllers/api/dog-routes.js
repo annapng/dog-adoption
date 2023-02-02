@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Dogs } = require('../../models')
+const { Dogs, goodWith, DogPics } = require('../../models')
 const withAuth = require('../../utils/auth')
 
 router.post('/:id', withAuth, async (req, res) => {
@@ -31,7 +31,29 @@ router.delete('/:id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
-})
+});
+
+router.get('/', async (req, res) => {
+    try {
+        const dbDogData = await Dogs.findAll({
+            include: [{
+                model: DogPics,
+                attributes: ['dogPic'],
+            },
+            {
+                model: goodWith,
+            }
+        ],
+        });
+        const dog = dbDogData.map(dog => dog.get({ plain: true }));
+        res.render('search', { dog });
+        console.log({ ...dog  })
+        console.log({ dog })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
+  });
 
 
 
