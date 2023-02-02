@@ -17,7 +17,7 @@ goodWith.init(
         },
         cat: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         kids: {
             type: DataTypes.STRING,

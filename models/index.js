@@ -12,17 +12,25 @@ const DogPics = require('./dogPics');
     //foreignKey: 'dogs_id'
 //});
 
+Dogs.hasOne(DogPics, {
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
+});
+
 DogPics.belongsTo(Dogs, {
-    foreignKey: 'dogs_id'
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
 });
 
 //this is a problem
 goodWith.hasMany(Dogs, {
-    foreignKey: 'dog_goodWith'
+    foreignKey: 'dog_goodWith',
+    onDelete: 'CASCADE'
 });
 
 Dogs.belongsTo(goodWith, {
-    foreignKey: 'dog_goodWith'
+    foreignKey: 'dog_goodWith',
+    onDelete: 'CASCADE'
 });
 /*
 Restriction.belongsToMany(User, {
@@ -33,6 +41,7 @@ Restriction.belongsToMany(User, {
 module.exports = {
     User, 
     Dogs,
-    DogPics 
-    //Restriction
+    DogPics,
+    goodWith, 
+    
 }; 
