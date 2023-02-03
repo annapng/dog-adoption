@@ -32,6 +32,8 @@ body {
     font-size: xx-large;
 }
 
+
+
 #logout {
     color: black;
     font-size: large;
@@ -75,4 +77,18 @@ body {
     body {
         width: 500px;
     }
+  }
+
+  .parent {
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+    height: 100%;
+  }
+
+  .child {
+    display: inline-block;
+    padding: 1px;
+    width: 49%;
+    vertical-align: middle;
   }

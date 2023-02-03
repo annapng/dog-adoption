@@ -22,7 +22,7 @@ const goodWithData = [
     {commonName:"German Shepherd", otherDogs: "yes", cat: "yes", kids: "yes"},
     {commonName:"Italian Greyhound", otherDogs: "yes", cat: "yes", kids: "yes"},
     {commonName:"Afghan Hound", otherDogs: "yes", cat: "no", kids: "no"},
-    {commonName:"Blood Hound", otherDogs: "yes", cat: "no", kids: "yes"},
+    {commonName:"Blood Hound", otherDogs: "yes", cat: "no", kids: "no"},
     {commonName:"Husky", otherDogs: "yes", cat: "yes", kids: "yes"},
     {commonName:"Kelpie", otherDogs: "yes", cat: "yes", kids: "yes"},
     {commonName:"Labradoodle", otherDogs: "yes", cat: "yes", kids: "yes"},

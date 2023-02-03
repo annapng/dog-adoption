@@ -1,0 +1,1 @@
+const { Dogs } = require('../models');
