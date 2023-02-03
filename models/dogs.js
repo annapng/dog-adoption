@@ -40,9 +40,9 @@ Dogs.init(
             allowNull: false,
         },
     },
-          },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: false,
         modelName: 'dogs',
