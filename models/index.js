@@ -25,12 +25,12 @@ DogPics.belongsTo(Dogs, {
 
 //this is a problem
 goodWith.hasMany(Dogs, {
-    foreignKey: 'commonName',
+    foreignKey: 'dog_goodWith',
     onDelete: 'CASCADE'
 });
 
 Dogs.belongsTo(goodWith, {
-    foreignKey: 'commonName',
+    foreignKey: 'dog_goodWith',
     onDelete: 'CASCADE'
 });
 /*
