@@ -40,10 +40,6 @@ Dogs.init(
             allowNull: false,
         },
     },
-<<<<<<< Updated upstream
-=======
-          
->>>>>>> Stashed changes
     {
         sequelize,
         timestamps: false,
