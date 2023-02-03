@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Dogs, goodWith, DogPics } = require('../../models')
 const withAuth = require('../../utils/auth')
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/:id', withAuth, async (req, res) => {
     try {
         const newDogs = await Dogs.create({
             ...req.body,
