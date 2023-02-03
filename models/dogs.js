@@ -39,11 +39,8 @@ Dogs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        likesToPlay: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        }
     },
+          },
     {
         sequelize,
         freezeTableName: true,
