@@ -6,6 +6,12 @@ class DogPics extends Model {}
 
 DogPics.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true, 
+        },
         APIname: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -20,7 +26,7 @@ DogPics.init(
         },
         dogs_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'dogs',
                 key: 'id'
