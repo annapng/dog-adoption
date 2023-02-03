@@ -6,6 +6,12 @@ class DogPics extends Model {}
 
 DogPics.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true, 
+        },
         APIname: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -21,14 +27,17 @@ DogPics.init(
         dogs_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
-            autoIncrement: true, 
+            references: {
+                model: 'dogs',
+                key: 'id'
+            },
         }
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: 'dogPics',
     }
 )

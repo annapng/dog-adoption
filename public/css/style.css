@@ -11,14 +11,13 @@ body {
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;
-    width: fit-content;
     display: flex;
 }
 
 .navbar {
  background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
  background-color: transparent;
- width: fit-content;
+ width: 100%;
  margin: 0px;
 }
 
@@ -66,4 +65,14 @@ body {
     font-size: large;
  }
 
+ @media screen and (max-width: 720px) {
+    #navTitle {
+      font-size: 50px;
+    }
+  }
 
+  @media screen and (max-width: 500px) {
+    body {
+        width: 500px;
+    }
+  }

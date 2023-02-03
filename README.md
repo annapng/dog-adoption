@@ -2,7 +2,7 @@
  
 ## Description
 
-The Adopt, Don't Shop is a fullstack web application that allows users to search for adoptable dogs in a MySQL database.  Users must first sign up, then can log in to browse.  Once a dog is decided upon, the user will then need to fill out a form to make sure the dog is a good fit for their home.   
+The Adopt, Don't Shop is a fullstack web application that allows users to search for adoptable dogs in a MySQL database.  Users must first sign up, then can log in to browse.  The search functionality allows the user make selections to make sure the dog is a good fit for their home.   
 
 ## User Story
 
