@@ -1,7 +1,9 @@
+const Dogs = require('./dogs');
 const User = require('./User');
 const goodWith = require('./goodWith');
-const Dogs = require('./dogs');
+//const Dogs = require('./dogs');
 const DogPics = require('./dogPics');
+
 //const Restriction = require('./restrictions');
 
 //Dogs.belongsTo(User, {
@@ -43,5 +45,8 @@ module.exports = {
     Dogs,
     DogPics,
     goodWith, 
-    
+<<<<<<< HEAD
+=======
+
+>>>>>>> 985727d4e0f5769183d1df60cea648e9c879b954
 }; 
