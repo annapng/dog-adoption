@@ -1,7 +1,8 @@
+const { goodWith } = require ('../models');
 const { Dogs } = require('../models');
 
 const dogsData = [
-    {id:1, name: "Lola", age:4, gender: "female", commonName: "Akita", breed: "Akita", size: "large"},
+    {id:1, name: "Lola", age:4, gender: "female", commonName:"Akita", breed: "Akita", size: "large"},
     {id:2, name: "Hades", age:11, gender: "male", commonName: "Akita", breed: "Akita", size: "large"},
     {id:3, name: "Crom", age:7, gender: "female", commonName: "Appenzeller", breed: "Appenzeller", size: "large"},
     {id:4, name: "Stella", age:15, gender: "male", commonName: "Appenzeller", breed: "Appenzeller", size: "large"},
