@@ -40,6 +40,7 @@ Dogs.init(
             allowNull: false,
         },
     },
+          },
     {
         sequelize,
         freezeTableName: true,

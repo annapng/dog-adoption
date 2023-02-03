@@ -26,7 +26,7 @@ DogPics.init(
         },
         dogs_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'dogs',
                 key: 'id'
