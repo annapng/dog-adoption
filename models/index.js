@@ -45,4 +45,8 @@ module.exports = {
     Dogs,
     DogPics,
     goodWith, 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 985727d4e0f5769183d1df60cea648e9c879b954
 }; 
