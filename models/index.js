@@ -1,23 +1,36 @@
 const User = require('./User');
+const goodWith = require('./goodWith');
 const Dogs = require('./dogs');
 const DogPics = require('./dogPics');
-const goodWith = require('./goodWith');
 //const Restriction = require('./restrictions');
 
-Dogs.belongsTo(User, {
-    foreignKey: 'dogs_id'
-});
+//Dogs.belongsTo(User, {
+  //  foreignKey: 'dogs_id'
+////});
 
-User.hasMany(Dogs, {
-    foreignKey: 'dogs_id'
+//User.hasMany(Dogs, {
+    //foreignKey: 'dogs_id'
+//});
+
+Dogs.hasOne(DogPics, {
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
 });
 
 DogPics.belongsTo(Dogs, {
-    foreignKey: 'commonName'
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
 });
 
-goodWith.belongsTo(Dogs, {
-    foreignKey: 'commonName'
+//this is a problem
+goodWith.hasMany(Dogs, {
+    foreignKey: 'dog_goodWith',
+    onDelete: 'CASCADE'
+});
+
+Dogs.belongsTo(goodWith, {
+    foreignKey: 'dog_goodWith',
+    onDelete: 'CASCADE'
 });
 /*
 Restriction.belongsToMany(User, {
@@ -29,6 +42,6 @@ module.exports = {
     User, 
     Dogs,
     DogPics,
-    goodWith,
-    //Restriction
+    goodWith, 
+    
 }; 
