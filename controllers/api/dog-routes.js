@@ -46,9 +46,9 @@ router.get('/', async (req, res) => {
         ],
         });
         const dog = dbDogData.map(dog => dog.get({ plain: true }));
-        res.render('search', { dog });
+        //res.render('search', { dog });
         console.log({ ...dog  })
-        console.log({ dog })
+        //console.log({ dog })
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
