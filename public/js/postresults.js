@@ -371,7 +371,20 @@ function submitBreed(event) {
 
 }
 
+// David was working on this fetch for grabing the dog information post 
+//const respone = await fetch('/search', {
+    //method:'post',
+    //headers: {'Content-Type': 'application/json'},
+    //body:JSON.stringify(answersSelection)
+//})
 
+//.then(data => {
+    //res.JSON(data);
+//})
+//.catch(err => {
+    //console.error(err)
+    //res.status(500).send('Error getting dogs')
+//})
 
 
 
