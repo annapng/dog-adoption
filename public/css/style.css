@@ -32,8 +32,6 @@ body {
     font-size: xx-large;
 }
 
-
-
 #logout {
     color: black;
     font-size: large;
@@ -65,6 +63,10 @@ body {
  .loginLink {
     color: black;
     font-size: large;
+ }
+
+ .signup-form {
+  background-color: rgb(200, 222, 186); 
  }
 
  @media screen and (max-width: 720px) {
