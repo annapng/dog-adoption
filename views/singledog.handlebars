@@ -1,11 +1,11 @@
 <section class="card">
-    <a href="/searchreturn/{{id}}">
+    <a href="/dogs/{{id}}">
         <div class="card-body">
             <div class='parent'>
                 <div class='child'><img src={{dogPic.dogPic}} class="img-fluid">
     </a></div>
     <div class='child'>
-        <h1>{{commonName}}</h1>
+        <h1>{{name}}</h1>
         <p>Age: {{age}}</p>
         <p>Gender: {{gender}}</p>
         <p>Breed: {{breed}}</p>
@@ -22,7 +22,7 @@
 </section>
 <br>
 <div class="adopt">
-    <a class="btn" id="adopt" href="/confirm">Adopt Me!</a>
+    <a class="btn btn-dark" id="adopt" href="/confirm">Adopt Me!</a>
 </div>
 
-<script src="./js/singleDog.js"></script>
+<!--<script src="./js/singleDog.js"></script>

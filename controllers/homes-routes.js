@@ -28,7 +28,34 @@ router.get('/search', async (req, res) => {
     })
 })
 
-router.get('/dog/:id', async (req, res) => {
+router.get('/searchreturn', async (req, res) => {
+    try {
+        const dbDogData = await Dogs.findAll({
+            include: [{
+                model: DogPics,
+                attributes: ['dogPic'],
+            },
+            {
+                model: goodWith,
+                attributes: [
+                    'otherDogs',
+                    'cat',
+                    'kids'
+                ]
+            }
+        ],
+        });
+        const dogs = dbDogData.map(dog => dog.get({ plain: true }));
+        res.render('searchreturn', { dogs, logged_in: req.session.logged_in });
+        console.log({ ...dogs  })
+        //console.log({ dogs })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
+  });
+
+router.get('/dogs/:id', async (req, res) => {
     try {
         const dbDogData = await Dogs.findByPk(req.params.id, {
             include: [{
