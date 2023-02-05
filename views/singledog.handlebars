@@ -1,16 +1,24 @@
-<div class='parent'>
-  <div class='child'><img src={{dogPic}} class="img-fluid"></a></div>
-  <div class='child'><h1>{{commonName}}</h1>
-  <p>Age: {{age}}</p>
-  <p>Gender: {{gender}}</p>
-  <p>Breed: {{breed}}</p>
-  <p>Size: {{size}}</p>
-  <div id="goodWith">
-    <br>Other Dogs: {{otherDogs}}</br>
-    <br>Cats: {{cat}}</br>
-    <br>Human Children: {{kids}}</br>
-  </div>
-  </div>
-</div>
+<section class="card">
+    <a href="/searchreturn/{{id}}">
+        <div class="card-body">
+            <div class='parent'>
+                <div class='child'><img src={{dogPic.dogPic}} class="img-fluid">
+    </a></div>
+    <div class='child'>
+        <h1>{{commonName}}</h1>
+        <p>Age: {{age}}</p>
+        <p>Gender: {{gender}}</p>
+        <p>Breed: {{breed}}</p>
+        <p>Size: {{size}}</p>
+        <div id="goodWith">
+            <br>Other Dogs: {{goodWith.otherDogs}}</br>
+            <br>Cats: {{goodWith.cat}}</br>
+            <br>Human Children: {{goodWith.kids}}</br>
+        </div>
+    </div>
+    </div>
+    </div>
+    </a>
+</section>
 
 <script src="./js/singleDog.js"></script>
