@@ -33,7 +33,7 @@ VALUES
     (31, "name", 15, "female", "Dalmatian", "large"),
     (32, "name", 11, "male", "Dalmatian", "large"),
     (33, "name", 12, "female", "Great Dane", "large"),
-    (34, "name", 3, "male", "Great Dane", "large"),
+    (34, "Scout", 3, "male", "Great Dane", "large"),
     (35, "name", 13, "female", "Doberman", "large"),
     (36, "name", 7, "male", "Doberman", "large"),
     (37, "name", 13, "female", "German Shepherd", "large"),
