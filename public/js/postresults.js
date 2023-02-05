@@ -12,8 +12,7 @@ const answersSelection = [];
 function submitForm(event) {
     event.preventDefault();
     const genderMale = document.querySelector("#male");
-    const genderFemale = document.querySelector("#female");
-    
+    const genderFemale = document.querySelector("#female");  
 
     
     if(genderMale.checked) {
@@ -372,20 +371,23 @@ function submitBreed(event) {
 }
 
 // David was working on this fetch for grabing the dog information post 
-//const respone = await fetch('/search', {
-    //method:'post',
-    //headers: {'Content-Type': 'application/json'},
-    //body:JSON.stringify(answersSelection)
-//})
+const searchFormHandler = async (event) => {
+    event.preventDefault();
+   try {
+    const response = await fetch('/api/sumbit-form', {
+    method:'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(answersSelection)
+});
+const data = await response.json();
+   console.log(data);
+ } catch(err) {
+    console.log(err)
+    res.status(500).send('No dog found with this search criteria')
+   } 
+}
 
-//.then(data => {
-    //res.JSON(data);
-//})
-//.catch(err => {
-    //console.error(err)
-    //res.status(500).send('Error getting dogs')
-//})
-
+searchFormHandler();
 
 
 
