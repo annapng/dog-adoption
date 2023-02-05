@@ -32,11 +32,9 @@ body {
     font-size: xx-large;
 }
 
-
-
 #logout {
     color: black;
-    font-size: large;
+    font-size: xx-large;
 }
 
 .mission{
@@ -67,6 +65,27 @@ body {
     font-size: large;
  }
 
+ .signup-form {
+  background-color: rgb(200, 222, 186); 
+ }
+
+ 
+ .parent {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px;
+  height: 100%;
+}
+
+.child {
+  display: inline-block;
+  padding: 1px;
+  width: 49%;
+  vertical-align: middle;
+}
+
+
+
  @media screen and (max-width: 720px) {
     #navTitle {
       font-size: 50px;
@@ -79,16 +98,4 @@ body {
     }
   }
 
-  .parent {
-    border: 1px solid black;
-    text-align: center;
-    padding: 2px;
-    height: 100%;
-  }
-
-  .child {
-    display: inline-block;
-    padding: 1px;
-    width: 49%;
-    vertical-align: middle;
-  }
+ 

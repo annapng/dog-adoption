@@ -1,19 +1,17 @@
-document.querySelector(".signup-form").addEventListener("submit", submitForm)
-document.querySelector(".signup-form").addEventListener("submit", submitSize)
-document.querySelector(".signup-form").addEventListener("submit", submitGoodDogs)
-document.querySelector(".signup-form").addEventListener("submit", submitGoodCats)
-document.querySelector(".signup-form").addEventListener("submit", submitGoodKids)
-document.querySelector(".signup-form").addEventListener("submit", submitAge)
+document.querySelector(".signup-form").addEventListener("submit", submitForm);
+document.querySelector(".signup-form").addEventListener("submit", submitSize);
+document.querySelector(".signup-form").addEventListener("submit", submitGoodDogs);
+document.querySelector(".signup-form").addEventListener("submit", submitGoodCats);
+document.querySelector(".signup-form").addEventListener("submit", submitGoodKids);
+document.querySelector(".signup-form").addEventListener("submit", submitAge);
 document.querySelector(".signup-form").addEventListener("submit", submitBreed);
-
 
 const answersSelection = [];
 
 function submitForm(event) {
     event.preventDefault();
     const genderMale = document.querySelector("#male");
-    const genderFemale = document.querySelector("#female");
-    
+    const genderFemale = document.querySelector("#female");  
 
     
     if(genderMale.checked) {
@@ -21,14 +19,12 @@ function submitForm(event) {
     }else {
         answersSelection.push("gender: 'female'");
     }
-    console.log(answersSelection);
+    //console.log(answersSelection);
     if(genderMale.checked && genderFemale.checked) {
         const bothChecked = document.querySelector(".genderOne");
         bothChecked.innerHTML = "ERROR: You can only check one."
         console.log("you can only pick one");
     }
-
-
 
 
 }
@@ -371,11 +367,25 @@ function submitBreed(event) {
 
 }
 
+// submitButton.onsubmit = searchFormHandler();
 
 
+const searchFormHandler = async (event) => {
+   event.preventDefault();
 
+try {
+    const response = await fetch('/api/dog', {
+    method:'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(answersSelection)
+});
+   const data = await response.json();
+   console.log(data);
 
+ } catch(err) {
+    console.log(err)
+    res.status(500).send('No dog found with this search criteria')
+   } 
+};
 
-
-console.log(answersSelection);
-
+document.querySelector('.signup-form').addEventListener('submit', searchFormHandler);

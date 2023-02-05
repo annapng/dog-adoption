@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dogs, User } = require('../models');
+const { Dogs, goodWith, DogPics } = require('../models')
 const withAuth = require('../utils/auth');
 
 
@@ -18,11 +18,67 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/confirm', (req, res) => {
+    res.render('confirm');
+});
 
 router.get('/search', async (req, res) => {
     res.render('search', {
         logged_in: req.session.logged_in
     })
 })
+
+router.get('/searchreturn', async (req, res) => {
+    try {
+        const dbDogData = await Dogs.findAll({
+            include: [{
+                model: DogPics,
+                attributes: ['dogPic'],
+            },
+            {
+                model: goodWith,
+                attributes: [
+                    'otherDogs',
+                    'cat',
+                    'kids'
+                ]
+            }
+        ],
+        });
+        const dogs = dbDogData.map(dog => dog.get({ plain: true }));
+        res.render('searchreturn', { dogs, logged_in: req.session.logged_in });
+        console.log({ ...dogs  })
+        //console.log({ dogs })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
+  });
+
+router.get('/dogs/:id', async (req, res) => {
+    try {
+        const dbDogData = await Dogs.findByPk(req.params.id, {
+            include: [{
+                model: DogPics,
+                attributes: ['dogPic'],
+            },
+            {
+                model: goodWith,
+                attributes: [
+                    'otherDogs',
+                    'cat',
+                    'kids'
+                ]
+            }
+            ],
+        });
+        const dog = dbDogData.get({ plain: true });
+        res.render('singledog', { ...dog, logged_in: req.session.logged_in});
+        console.log({ ...dog })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
+});
 
 module.exports = router;
