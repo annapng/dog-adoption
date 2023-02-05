@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+//Creates new Sequelize checks for password, if logged in 
 class User extends Model {
     checkPasword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
@@ -10,6 +11,7 @@ class User extends Model {
 
 User.init(
     {
+      //Creating an id defining primary key 
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -38,6 +40,7 @@ User.init(
     },
     {
         hooks: {
+          //BeforeCreate hook is working with the data created, hashing password
             beforeCreate: async (newUserData) => {
               newUserData.password = await bcrypt.hash(newUserData.password, 10);
               return newUserData;
@@ -47,6 +50,7 @@ User.init(
               return updatedUserData;
             },
         },
+        //Linking database
         sequelize,
         timestamps: false,
         freezeTableName: true,
@@ -54,5 +58,5 @@ User.init(
         modelName: 'User',
     },  
 );
-
+//Exporting User
 module.exports = User;
