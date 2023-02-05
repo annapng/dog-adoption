@@ -1,9 +1,9 @@
-const router = require('express').Router()
-const { Dogs } = require('../../models')
-const withAuth = require('../../utils/auth')
+const router = require('express').Router();
+const { Dogs } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.use(bodyParser.urlencoded({ extended: false}))
-router.post('/sumbit-form', (req, res) => {
+//router.use(bodyParser.urlencoded({ extended: false}));
+router.post('/', async (req, res) => {
     const information = {
      goodWithKids: req.body.goodWith.kids,
      goodWithOtherDogs: req.body.goodWith.otherDogs,
@@ -17,7 +17,7 @@ router.post('/sumbit-form', (req, res) => {
     Dogs.findall({ where: information})
     .then(data => {
         res.json(data);
-        console.log('data')
+        console.log(data);
       })
       .catch(err => {
         console.error(err);
@@ -33,8 +33,8 @@ router.post('/sumbit-form', (req, res) => {
     console.log('Dogs common name:', commonName);
     console.log('Dogs size:', size);
     
-    res.send('Form sumbitted')
-})
+    res.send('Form submitted')
+});
 
 
-//module.exports = router
+module.exports = router;

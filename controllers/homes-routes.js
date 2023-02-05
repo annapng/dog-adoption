@@ -45,7 +45,6 @@ router.get('/dog/:id', async (req, res) => {
         const dog = dbDogData.get({ plain: true });
         res.render('singledog', { ...dog, logged_in: req.session.logged_in});
         console.log({ ...dog })
-        //console.log({ dog })
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
