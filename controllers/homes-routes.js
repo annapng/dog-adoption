@@ -18,6 +18,9 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/confirm', (req, res) => {
+    res.render('confirm');
+});
 
 router.get('/search', async (req, res) => {
     res.render('search', {
