@@ -56,7 +56,7 @@ const DogsPicData = [
     {id:53, APIname:"maltese", commonName: "Maltese", dogPic: "https://images.dog.ceo/breeds/maltese/n02085936_5582.jpg",dogs_id:53},
     {id:54, APIname:"maltese", commonName: "Maltese", dogPic: "https://images.dog.ceo/breeds/maltese/n02085936_9812.jpg",dogs_id:54},
     {id:55, APIname:"mastiff/english", commonName: "English Mastiff", dogPic: "https://images.dog.ceo/breeds/mastiff-english/2.jpg",dogs_id:55},
-    {id:56, APIname:"mastiff/english", commonName: "English Mastiff", dogPic: "https://images.dog.ceo/breeds/mastiff-english/2.jpg",dogs_id:56},
+    {id:56, APIname:"mastiff/english", commonName: "English Mastiff", dogPic: "https://images.dog.ceo/breeds/mastiff-english/3.jpg",dogs_id:56},
     {id:57, APIname:"mix", commonName: "Mix", dogPic: "https://images.dog.ceo/breeds/mix/luna.jpg",dogs_id:57},
     {id:58, APIname:"mix", commonName: "Mix", dogPic: "https://images.dog.ceo/breeds/mix/Polo.jpg",dogs_id:58},
     {id:59, APIname:"mountain/bernese", commonName: "Bernese Mountain", dogPic: "https://images.dog.ceo/breeds/mountain-bernese/n02107683_3908.jpg",dogs_id:59},
