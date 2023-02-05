@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Dogs } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Create dog and info.
 //router.use(bodyParser.urlencoded({ extended: false}));
 router.post('/dog', async (req, res) => {
     const information = {
@@ -14,6 +15,7 @@ router.post('/dog', async (req, res) => {
     // size: req.body.size
     };
 
+    // Get a single dog 
     router.get('/:id', (req, res) => {
       Dogs.findAll({
               where: {
