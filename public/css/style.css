@@ -9,7 +9,9 @@ body {
     background-attachment: scroll;
     background-image: url(../images/Background.jpg);
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed, scroll;
+    background-size: cover;
     justify-content: center;
     display: flex;
 }
