@@ -34,7 +34,7 @@ Access the deployed application with the Heroku link:
 ![Log In](./public/images/LogIn.PNG)
 ![All Dogs](./public/images/alldogs.PNG)
 ![Single Dog](./public/images/singledog.PNG)
-![Request]
+![Request](./public/images/request.PNG)
 ![Confirm](./public/images/Confirm.PNG)
 
 ## Technologies / Libraries / APIs
