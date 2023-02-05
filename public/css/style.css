@@ -100,4 +100,11 @@ body {
     }
   }
 
- 
+ #info {
+    text-align: center;
+    font-size: 30px;
+ }
+
+ form {
+    padding: 20px;
+ }
