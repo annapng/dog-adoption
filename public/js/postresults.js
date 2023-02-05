@@ -1,3 +1,5 @@
+// Javascript for Results page
+
 document.querySelector(".signup-form").addEventListener("submit", submitForm);
 document.querySelector(".signup-form").addEventListener("submit", submitSize);
 document.querySelector(".signup-form").addEventListener("submit", submitGoodDogs);

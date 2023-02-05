@@ -1,3 +1,5 @@
+// Javascript for our Logout button - sends a request to our post method to logout the user using the application.
+
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',
