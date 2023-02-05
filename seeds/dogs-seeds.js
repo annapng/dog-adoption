@@ -79,7 +79,7 @@ const dogsData = [
     {id:75, name: "Drew B", age:12, gender: "female", commonName: "Pug", breed: "Pug", size: "small"},
     {id:76, name: "Fisher", age:2, gender: "male", commonName: "Pug", breed: "Pug", size: "small"},
     {id:77, name: "Luna", age:7, gender: "female", commonName: "Golden Retriever", breed: "Golden Retriever", size: "medium"},
-    {id:78, name: "Will", age:10, gender: "male", commonName: "Golden Retriever", breed: "Golden Retriever", size: "medium"},
+    {id:78, name: "Steve Nash", age:10, gender: "male", commonName: "Golden Retriever", breed: "Golden Retriever", size: "medium"},
     {id:79, name: "Scarlett", age:11, gender: "female", commonName: "Rottweiler", breed: "Rottweiler", size: "large"},
     {id:80, name: "Brad P", age:12, gender: "male", commonName: "Rottweiler", breed: "Rottweiler", size: "large"},
     {id:81, name: "Lola", age:8, gender: "female", commonName: "Samoyed", breed: "Samoyed", size: "large"},
