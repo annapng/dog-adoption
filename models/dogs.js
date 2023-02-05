@@ -1,11 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
-
+//Creates a new Sequelize model for Dogs
 class Dogs extends Model {}
 
 Dogs.init(
     {
+        //Creating an id defining primary key 
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -41,6 +42,7 @@ Dogs.init(
         },
     },
     {
+        //Linking database connection
         sequelize,
         timestamps: false,
         freezeTableName: true,
@@ -48,5 +50,5 @@ Dogs.init(
         modelName: 'dogs',
     }
 )
-
+//Exporting Dogs
 module.exports = Dogs;
