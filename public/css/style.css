@@ -46,6 +46,11 @@ body {
     text-indent: 150px;
 }
 
+#missionW {
+    font-size: 30px;
+    text-align: center;
+}
+
 #missionP {
     text-indent: 30px;
     font-size: 30px;
