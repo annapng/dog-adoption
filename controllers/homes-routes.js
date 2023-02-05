@@ -25,31 +25,31 @@ router.get('/search', async (req, res) => {
     })
 })
 
-router.get('/searchreturn/:id', withAuth, async (req, res) => {
+router.get('/dog/:id', async (req, res) => {
     try {
-      const dbDogData = await Dogs.findByPk(req.params.id, {
-      include: [{
-        model: DogPics,
-        attributes: ['dogPic'],
-    },
-    {
-        model: goodWith,
-        attributes: [
-           'otherDogs',
-           'cat',
-           'kids' 
-        ]
-    }
-],
-});
-const dog = dbDogData.map(dog => dog.get({ plain: true }));
-res.render('searchreturn', { dog });
-console.log({ ...dog  })
-//console.log({ dog })
-} catch (err) {
-console.log(err);
-res.status(500).json(err);
-};
+        const dbDogData = await Dogs.findByPk(req.params.id, {
+            include: [{
+                model: DogPics,
+                attributes: ['dogPic'],
+            },
+            {
+                model: goodWith,
+                attributes: [
+                    'otherDogs',
+                    'cat',
+                    'kids'
+                ]
+            }
+            ],
+        });
+        const dog = dbDogData.get({ plain: true });
+        res.render('singledog', { ...dog, logged_in: req.session.logged_in});
+        console.log({ ...dog })
+        //console.log({ dog })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
 });
 
 module.exports = router;
