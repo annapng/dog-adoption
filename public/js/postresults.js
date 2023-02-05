@@ -374,7 +374,7 @@ const searchFormHandler = async (event) => {
    event.preventDefault();
 
 try {
-    const response = await fetch('/api/search', {
+    const response = await fetch('/api/dog', {
     method:'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(answersSelection)

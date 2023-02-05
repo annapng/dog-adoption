@@ -3,32 +3,36 @@ const { Dogs } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //router.use(bodyParser.urlencoded({ extended: false}));
-router.post('/', async (req, res) => {
+router.post('/dog', async (req, res) => {
     const information = {
-     goodWithKids: req.body.goodWith.kids,
-     goodWithOtherDogs: req.body.goodWith.otherDogs,
-     goodWithCat: req.body.goodWith.cat,
-     age: req.body.age,
+    // goodWithKids: req.body.goodWith.kids,
+   //  goodWithOtherDogs: req.body.goodWith.otherDogs,
+   //  goodWithCat: req.body.goodWith.cat,
+   //  age: req.body.age,
      gender: req.body.gender,
-     commonName: req.body.commonName,
-     size: req.body.size
+     breed: req.body.breed,
+    // size: req.body.size
     };
 
-    Dogs.findall({ where: information})
-    .then(data => {
-        res.json(data);
-        console.log(data);
-      })
-      .catch(err => {
-        console.error(err);
-        res.status(500).send("Error retrieving dogs");
-      });
+    router.get('/:id', (req, res) => {
+      Dogs.findAll({
+              where: {
+                  gender: req.body.gender,
+                  commonName: req.body.commonName
+              }
+          })
+          .then(dbCommentData => res.json(dbCommentData))
+          .catch(err => {
+              console.log(err);
+              res.status(500).json(err);
+          })
+  });
 
 
-    console.log('Good with Kids:', goodWithKids);
-    console.log('Good with other dogs:', goodWithOtherDogs);
-    console.log('Good with cats:', goodWithCat);
-    console.log('Dogs age:', age);
+    //console.log('Good with Kids:', goodWith.kids);
+    //console.log('Good with other dogs:', goodWith.otherDogs);
+    //console.log('Good with cats:', goodWith.cat);
+    //console.log('Dogs age:', age);
     console.log('Dogs gender:', gender);
     console.log('Dogs common name:', commonName);
     console.log('Dogs size:', size);
