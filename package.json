@@ -19,6 +19,7 @@
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
         "fetch": "^1.1.0",
+        "heroku": "^8.0.1",
         "mysql": "^2.18.1",
         "mysql2": "^3.1.0",
         "node-fetch": "^3.3.0",
