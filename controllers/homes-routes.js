@@ -10,24 +10,29 @@ router.get('/', async (req, res) => {
     });
 })
 
+// Get sign up handlebars
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// Get login handlebars
 router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// Get confirm handlebars
 router.get('/confirm', (req, res) => {
     res.render('confirm');
 });
 
+// Get search handlebars
 router.get('/search', async (req, res) => {
     res.render('search', {
         logged_in: req.session.logged_in
     })
 })
 
+// Get search return handlebars and return search inputs
 router.get('/searchreturn', async (req, res) => {
     try {
         const dbDogData = await Dogs.findAll({
@@ -55,6 +60,7 @@ router.get('/searchreturn', async (req, res) => {
     };
   });
 
+// get and return a single dog
 router.get('/dogs/:id', async (req, res) => {
     try {
         const dbDogData = await Dogs.findByPk(req.params.id, {
