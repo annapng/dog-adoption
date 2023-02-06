@@ -1,3 +1,5 @@
+// Javascript for the Login Page. Sending out a fetch request to our post to ensure that the user is able to login correctly.
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   

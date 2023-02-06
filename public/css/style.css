@@ -1,31 +1,132 @@
 body {
     font-family: 'Manrope', sans-serif;
     color: black;
+    /*width: fit-content;
+    /*linear-gradient(#dadbdd, rgb(100,195,43))*/
 }
 
 .top-image{
-    background-image: linear-gradient(#dadbdd, rgb(100,195,43)), url(../images/Background.jpg);
+    background-attachment: scroll;
+    background-image: url(../images/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed, scroll;
+    background-size: cover;
     justify-content: center;
-    max-width: 2040px;
     display: flex;
 }
 
+.navbar {
+ background-image:linear-gradient(#dadbdd, rgb(199, 230, 179));
+ background-color: transparent;
+ width: 100%;
+ margin: 0px;
+}
 
-
-.navbar-text{
+#navTitle{
     font-family: 'Rubik Moonrocks', cursive;
     color: black;
     font-size: 75px;
 }
 
-.nav-link {
+#navLink {
     color: black;
     font-size: xx-large;
 }
 
-#home{
-   vertical-align: middle; 
+#logout {
+    color: black;
+    font-size: xx-large;
 }
 
+#navLink:hover {
+    color: whitesmoke;
+    transition-duration: 0.5s;
+}
+
+#logout:hover {
+    color: whitesmoke;
+    transition-duration: 0.5s;
+}
+
+.mission{
+    background-color: rgb(200, 222, 186); 
+}
+#missionH {
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 50px;
+    text-indent: 150px;
+    justify-content: center;
+}
+
+#missionW {
+    font-size: 30px;
+    text-align: center;
+}
+
+#missionP {
+    text-indent: 30px;
+    font-size: 30px;
+}
+
+ #linkRescue {
+    color: black;
+    font-size: 30px;
+ }
+ 
+ .signup {
+    background-color: rgb(200, 222, 186); 
+ }
+
+ .loginLink {
+    color: black;
+    font-size: large;
+ }
+
+ .signup-form {
+  background-color: rgb(200, 222, 186); 
+ }
+
+ 
+ .parent {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px;
+  height: 100%;
+}
+
+.child {
+  display: inline-block;
+  padding: 1px;
+  width: 49%;
+  vertical-align: middle;
+}
+
+
+
+ @media screen and (max-width: 720px) {
+    #navTitle {
+      font-size: 50px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    body {
+        width: 500px;
+    }
+  }
+
+ #info {
+    text-align: center;
+    font-size: 30px;
+ }
+
+ form {
+    padding: 20px;
+ }
+
+ #adopt:hover {
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.5s;
+ }

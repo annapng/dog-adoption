@@ -1,13 +1,33 @@
-const User = require('./User');
 const Dogs = require('./dogs');
-const Restriction = require('./restrictions');
+const User = require('./User');
+const goodWith = require('./goodWith');
+const DogPics = require('./dogPics');
 
-Dog.belongsTo(User, {
-
+Dogs.hasOne(DogPics, {
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
 });
 
-User.hasMany(Dogs, {
-
+DogPics.belongsTo(Dogs, {
+    foreignKey: 'dogs_id',
+    onDelete: 'CASCADE'
 });
 
-module.exports = {User, Dogs, Restriction}; 
+
+goodWith.hasMany(Dogs, {
+    foreignKey: 'commonName',
+    onDelete: 'CASCADE'
+});
+
+Dogs.belongsTo(goodWith, {
+    foreignKey: 'commonName',
+    onDelete: 'CASCADE'
+});
+//Exports
+module.exports = {
+    User, 
+    Dogs,
+    DogPics,
+    goodWith, 
+
+}; 
