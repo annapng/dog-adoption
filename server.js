@@ -5,6 +5,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const mysql = require('mysql2');
+const fs = require('fs');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -27,6 +28,20 @@ const sess = {
 }; // cookies and/or doggy biscuits :)
 
 app.use(session(sess));
+
+// const seedConnect = fs.readFileSync("./seeds/index.js", {encoding: "utf-8"});
+
+// connection.query(seedConnect, err => {
+//   if (err) { throw err }
+// },
+
+// console.log("SEEDED"),
+// connection.end() );
+
+
+
+
+
 
 const hbs = exphbs.create({ helpers });
 // Express.js using the template engine ie. handlebars
