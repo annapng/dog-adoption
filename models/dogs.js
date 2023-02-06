@@ -25,7 +25,7 @@ Dogs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        commonName: {
+        goodWith_commonName: {
             type: DataTypes.STRING,
             references: {
                 model: 'goodWith',
