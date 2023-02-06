@@ -14,13 +14,13 @@ DogPics.belongsTo(Dogs, {
 });
 
 
-GoodWith.hasMany(Dogs, {
-    foreignKey: 'commonName',
+goodWith.hasMany(Dogs, {
+    foreignKey: 'goodWith_commonName',
     onDelete: 'CASCADE'
 });
 
-Dogs.belongsTo(GoodWith, {
-    foreignKey: 'commonName',
+Dogs.belongsTo(goodWith, {
+    foreignKey: 'goodWith_commonName',
     onDelete: 'CASCADE'
 });
 //Exports
