@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Dogs, goodWith, DogPics } = require('../../models')
+const { Dogs, GoodWith, DogPics } = require('../../models')
 const withAuth = require('../../utils/auth')
 
 // Allows user to see all dogs once logged in
@@ -43,7 +43,7 @@ router.get('/', async (req, res) => {
                 attributes: ['dogPic'],
             },
             {
-                model: goodWith,
+                model: GoodWith,
                 attributes: [
                     'otherDogs',
                     'cat',
@@ -71,7 +71,7 @@ router.get('/', async (req, res) => {
                 attributes: ['dogPic'],
             },
             {
-                model: goodWith,
+                model: GoodWith,
                 attributes: [
                     'otherDogs',
                     'cat',

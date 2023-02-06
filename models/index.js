@@ -1,6 +1,6 @@
 const Dogs = require('./dogs');
 const User = require('./User');
-const goodWith = require('./goodWith');
+const GoodWith = require('./goodWith');
 const DogPics = require('./dogPics');
 
 Dogs.hasOne(DogPics, {
@@ -28,6 +28,6 @@ module.exports = {
     User, 
     Dogs,
     DogPics,
-    goodWith, 
+    GoodWith, 
 
 }; 
