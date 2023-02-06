@@ -27,7 +27,7 @@ To install the project follow these steps:
 
 ## Usage
 
-Access the deployed application with the Heroku link: 
+Access the deployed application with the Heroku link: (https://stark-meadow-18260.herokuapp.com/)
 
 ![Home Page](./public/images/Homepage.PNG)
 ![Sign Up](./public/images/SignUp.PNG)
