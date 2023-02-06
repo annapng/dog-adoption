@@ -1,6 +1,6 @@
 const Dogs = require('./dogs');
 const User = require('./User');
-const goodWith = require('./goodWith');
+const GoodWith = require('./goodWith');
 const DogPics = require('./dogPics');
 
 Dogs.hasOne(DogPics, {
@@ -14,12 +14,12 @@ DogPics.belongsTo(Dogs, {
 });
 
 
-goodWith.hasMany(Dogs, {
+GoodWith.hasMany(Dogs, {
     foreignKey: 'commonName',
     onDelete: 'CASCADE'
 });
 
-Dogs.belongsTo(goodWith, {
+Dogs.belongsTo(GoodWith, {
     foreignKey: 'commonName',
     onDelete: 'CASCADE'
 });
@@ -28,6 +28,6 @@ module.exports = {
     User, 
     Dogs,
     DogPics,
-    goodWith, 
+    GoodWith, 
 
 }; 

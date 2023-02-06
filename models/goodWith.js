@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 //Creates a new Sequelize model for goodWith
-class goodWith extends Model {}
+class GoodWith extends Model {}
 
-goodWith.init(
+GoodWith.init(
     {
         //Creating properties for goodwith
         commonName: {
@@ -35,4 +35,4 @@ goodWith.init(
     }
 )
 //Exporting goodWith
-module.exports = goodWith;
+module.exports = GoodWith;
