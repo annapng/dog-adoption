@@ -84,6 +84,10 @@ body {
   vertical-align: middle;
 }
 
+.form-check {
+    /* display: flex; */
+    text-align: center;
+}
 
 
  @media screen and (max-width: 720px) {
